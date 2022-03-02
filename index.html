@@ -1,0 +1,17 @@
+<script type="module">
+  import { bg, show } from "https://js.sabae.cc/egadv.js";
+  
+  onload = async () => {
+      await bg(3904);
+      //await show(csv[30].join(","));
+      await show("サイガイクン by Code for FUKUI");
+      const r = await show("なにと戦う？",
+          ["地震", "火事"]
+      );
+      if (r == "地震") {
+          document.location = "earthquake.html";
+      } else if (r == "火事") {
+          document.location = "fire.html";
+      }
+  }
+  </script>

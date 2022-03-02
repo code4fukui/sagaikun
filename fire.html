@@ -1,0 +1,40 @@
+<script type="module">
+import { bg, show } from "https://js.sabae.cc/egadv.js";
+import { CSV } from "https://js.sabae.cc/CSV.js";
+
+onload = async () => {
+    const url = "https://code4fukui.github.io/tokyobichikunavi/csv/stockpile_list.csv";
+    const csv = await CSV.fetch(url);
+    // await show(csv[0].join(","));
+    const data = CSV.toJSON(csv);
+    
+    await bg();
+    while (true) {
+        const r = await show("火事が現れた",
+        ["たたかう","にげる","スマートフォン"]
+        );
+        if(r=="たたかう"){
+            await show("火傷を負う")}
+        if(r=="にげる"){
+            await show("家がなくなった")
+            await show("あなたが逃げちゃうから〜〜〜")
+            const g = await show("もう一度だけチャンスをあげよう",
+            ["戦う","逃げる","スマートフォン"]
+            )
+        
+            if(g == "スマートフォン"){
+                await show("消防車を呼ぶ")
+                break
+            }else{
+                await show("だめだこりゃ、やり直し！")
+            }
+        }
+        if(r=="スマートフォン"){
+            await show("消防車を呼ぶ")
+            break
+        }
+    }
+    await show("火が消えた")
+    
+}
+</script>

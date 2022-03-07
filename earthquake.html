@@ -1,13 +1,8 @@
 <script type="module">
     import { bg, show } from "https://js.sabae.cc/egadv.js";
-    import { CSV } from "https://js.sabae.cc/CSV.js";
     
     onload = async () => {
-        const url = "https://code4fukui.github.io/tokyobichikunavi/csv/stockpile_list.csv";
-        //const csv = await CSV.fetch(url);
-        
         await bg(1000);
-        //await show(csv[0].join(","));
         
         while (1){
             const r = await show("モンスター「地震」が現れた、どうする？", 

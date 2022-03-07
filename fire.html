@@ -3,11 +3,6 @@ import { bg, show } from "https://js.sabae.cc/egadv.js";
 import { CSV } from "https://js.sabae.cc/CSV.js";
 
 onload = async () => {
-    const url = "https://code4fukui.github.io/tokyobichikunavi/csv/stockpile_list.csv";
-    const csv = await CSV.fetch(url);
-    // await show(csv[0].join(","));
-    const data = CSV.toJSON(csv);
-    
     await bg();
     while (true) {
         const r = await show("火事が現れた",

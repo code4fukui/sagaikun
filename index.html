@@ -6,12 +6,16 @@
       //await show(csv[30].join(","));
       await show("サイガイクン by Code for FUKUI");
       const r = await show("なにと戦う？",
-          ["地震", "火事"]
+          ["地震", "火事", "調理中の火事", "学校での地震"]
       );
       if (r == "地震") {
           document.location = "earthquake.html";
       } else if (r == "火事") {
           document.location = "fire.html";
+      } else if (r == "調理中の火事") {
+          document.location = "cooking-fire.html";
+      } else if (r == "学校での火事") {
+          document.location = "school-eq.html";
       }
   }
   </script>

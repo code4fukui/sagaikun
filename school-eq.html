@@ -1,0 +1,16 @@
+<script type="module">
+import {bg,show}from"https://js.sabae.cc/egadv.js";
+
+await bg();
+await show("学校で地震が現れた。")
+let a = await show("どうする？",["隠れる","逃げる","たたかう"]);
+if (a=="隠れる"){
+    await show("机の下に隠れた");
+    await show("電球が落ちてきたが助かった");
+}else if(a=="逃げる"){
+    await show ("瓦礫が落ちてきて退路が断たれてしまった");
+}else{
+    await show("返り討ちにあってしまった");
+}
+</script>
+

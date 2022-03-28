@@ -1,0 +1,21 @@
+
+<script type="module">
+    import {bg, show} from "https://js.sabae.cc/egadv.js";
+    
+    await bg();
+    await show("台風が現れた。");
+    let a=await show("どうする？",["外にでる","家にこもる"]);
+    if (a=="外にでる"){
+        await show("何か持っていこう。");
+        let b=await show("何を持っていく？",["傘","ヘルメット"]);
+        if (b=="傘"){
+        await show("傘と一緒に飛ばされた。");
+        }else if(b=="ヘルメット"){
+            await show("頭に物が落ちてきたけど助かった。");
+        }
+    } else if (a=="家にこもる"){
+        await show("台風が通りすぎた。");
+    }
+    
+</script>
+

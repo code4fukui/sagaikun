@@ -6,8 +6,8 @@
 
 ## つくりかた
 
-1. ES-Jam を開く
-2. 下記コードをコピペして、「みてみる」を押す
+1. ブラウザで [ES-Jam](https://code4fukui.github.io/htmlprac/) を開く
+2. 下記コードをコピペして、「見てみる」を押す
 ```html
 <script type="module">
 import { bg, show } from "https://js.sabae.cc/egadv.js";

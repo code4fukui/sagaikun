@@ -1,7 +1,8 @@
 
 <script type="module">
-    import {bg, show} from "https://js.sabae.cc/egadv.js";
-    
+import {bg, show} from "https://js.sabae.cc/egadv.js";
+
+for (;;) {
     await bg();
     await show("台風が現れた。");
     let a=await show("どうする？",["外にでる","家にこもる"]);
@@ -12,10 +13,13 @@
         await show("傘と一緒に飛ばされた。");
         }else if(b=="ヘルメット"){
             await show("頭に物が落ちてきたけど助かった。");
+            break;
         }
     } else if (a=="家にこもる"){
         await show("台風が通りすぎた。");
+        break;
     }
-    
+}
+document.location = "./";
 </script>
 

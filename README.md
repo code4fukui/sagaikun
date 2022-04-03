@@ -4,7 +4,50 @@
 
 ![image](https://user-images.githubusercontent.com/1715217/156316472-5b6ed81d-18c4-4674-ac59-0e48cc2624ac.png)
 
-## 初回
+## つくりかた
+
+1. ES-Jam を開く
+2. 下記コードをコピペして、「みてみる」を押す
+```html
+<script type="module">
+import { bg, show } from "https://js.sabae.cc/egadv.js";
+
+await bg();
+await show("強い地震が来ます！");
+</script>
+```
+3. メッセージを追加する
+```js
+await show("強い地震が来ます！");
+await show("より正しい選択をして、生き延びてください");
+```
+4. 選択肢のつくりかた
+```js
+const ans = await show("どうする？", ["たたかう", "にげる", "アイテム"]);
+if (ans == "たたかう") {
+    await show（”たたかった");
+} else if (ans == "にげる") {
+    await show（”にげた");
+} else if (ans == "アイテム") {
+    await show（”アイテムを使った");
+}
+```
+5. ループのつくりかた （for と break）
+```js
+for (;;) {
+    const ans = await show("どうする？", ["つづける", "おわる"]);
+    if (ans == "おわる") {
+        break;
+    }
+}
+await show("ループおわり");
+```
+6. ページリンクのつくりかた
+```js
+document.location = "./";
+```
+
+## 作成レポート
 
 ### 良かったこと
 
@@ -22,3 +65,7 @@
 - 背景を合わせて、地震とか火事とかでるといい
   - 車の背景に文字とかしたい
   - 絵が得意な人に作ってもらうのも良さそう
+
+## ブログ
+
+https://fukuno.jig.jp/3533

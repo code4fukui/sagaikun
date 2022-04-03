@@ -6,7 +6,7 @@
       //await show(csv[30].join(","));
       await show("サイガイクン by Code for FUKUI");
       const r = await show("なにと戦う？",
-          ["地震", "火事", "調理中の火事", "学校での地震", "台風", "超強い台風"]
+          ["地震", "火事", "調理中の火事", "学校での地震", "台風", "超強い台風", "備蓄ナビえちぜんへ"]
       );
       if (r == "地震") {
           document.location = "earthquake.html";
@@ -20,6 +20,8 @@
           document.location = "typhoon.html";
       } else if (r == "超強い台風") {
           document.location = "super-typhoon.html";
+      } else {
+          document.location = "https://bichikunavi.code4fukui.org/";
       }
   }
   </script>

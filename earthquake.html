@@ -1,31 +1,32 @@
 <script type="module">
-    import { bg, show } from "https://js.sabae.cc/egadv.js";
-    
-    onload = async () => {
-        await bg(1000);
-        
-        while (1){
-            const r = await show("モンスター「地震」が現れた、どうする？", 
-            ["たたかう", "にげる", "アイテム"]
-            );
-            if (r == "たたかう"){
-                await show("地震には素手では勝てないよ");
-            }else if (r == "にげる"){
-                await show("それもあり、でもどうやって？");
-            }else if (r == "アイテム"){
-                const g = await show("どれを使う？", ["ヘリ", "電車", "徒歩","車"]);
-                if (g == "ヘリ"){
-                    await show("お見事！無事逃げ切れました!");
-                    break;
-                }else if (g == "電車"){
-                    await show("電車は動いていませーん");
-                }else if (g == "車"){
-                    await show("道がふさがって通れないよ");
-                }else{
-                    await show("徒歩はアイテムなのか...?");
-                }
+import { bg, show } from "https://js.sabae.cc/egadv.js";
+
+onload = async () => {
+    await bg(1000);
+
+    while (1){
+        const r = await show("モンスター「地震」が現れた、どうする？", 
+        ["たたかう", "にげる", "アイテム"]
+        );
+        if (r == "たたかう"){
+            await show("地震には素手では勝てないよ");
+        }else if (r == "にげる"){
+            await show("それもあり、でもどうやって？");
+        }else if (r == "アイテム"){
+            const g = await show("どれを使う？", ["ヘリ", "電車", "徒歩","車"]);
+            if (g == "ヘリ"){
+                await show("お見事！無事逃げ切れました!");
+                break;
+            }else if (g == "電車"){
+                await show("電車は動いていませーん");
+            }else if (g == "車"){
+                await show("道がふさがって通れないよ");
+            }else{
+                await show("徒歩はアイテムなのか...?");
             }
         }
-        await show("クイズ終了！！お疲れ様でした！");
     }
-    </script>
+    await show("クイズ終了！！お疲れ様でした！");
+    document.location = "./";
+}
+</script>

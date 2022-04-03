@@ -1,24 +1,27 @@
 <script type="module">
 import {bg, show} from "https://js.sabae.cc/egadv.js";
 
-await show("調理中に火事が現れた！");
-let a = await show("どうする？",["たたかう","にげる","様子を見る"]);
-if (a=="たたかう"){
-    let b = await show("どうする？",["マヨネーズを投げる","消火器を探す"]);
-    if (b=="マヨネーズを投げる"){
-        await show("消火成功！");
+for (;;) {
+    await show("調理中に火事が現れた！");
+    let a = await show("どうする？",["たたかう","にげる","様子を見る"]);
+    if (a=="たたかう"){
+        let b = await show("どうする？",["マヨネーズを投げる","消火器を探す"]);
+        if (b=="マヨネーズを投げる"){
+            await show("消火成功！");
+            break;
+        }else{
+           await show("逃げ遅れて火事に巻き込まれた");
+        }
+    }else if (a=="にげる"){
+        await show("家を失った");
     }else{
-      　await show("逃げ遅れて火事に巻き込まれた");
-    }
-}else if (a=="にげる"){
-    await show("家を失った");
-}else{
-    let c = await show("火が燃え広がった",["にげる"]); 
-    if (c=="にげる"){
-        await show("逃げきれない！");
-        await show("火事に巻き込まれた");
+        let c = await show("火が燃え広がった",["にげる"]); 
+        if (c=="にげる"){
+            await show("逃げきれない！");
+            await show("火事に巻き込まれた");
+        }
     }
 }
-
+document.location = "./";
 
 </script>

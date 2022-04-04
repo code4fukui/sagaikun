@@ -68,4 +68,6 @@ document.location = "./";
 
 ## ブログ
 
-https://fukuno.jig.jp/3533
+- [https://fukuno.jig.jp/3507](高専生が考える災害対策RPGスタイル「サイガイクン」とオープンソース体験ワークショップ)
+- [https://fukuno.jig.jp/3533](高専先輩から学ぶ生きる戦略とシビックテック入門で充実「サイガイクン」)
+ 
